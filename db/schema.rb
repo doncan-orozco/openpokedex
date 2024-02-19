@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_02_19_065737) do
+ActiveRecord::Schema[7.1].define(version: 2024_02_19_073904) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -47,6 +47,14 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_19_065737) do
     t.datetime "updated_at", null: false
     t.index ["pokemon_id"], name: "index_pokemons_types_on_pokemon_id"
     t.index ["type_id"], name: "index_pokemons_types_on_type_id"
+  end
+
+  create_table "species", force: :cascade do |t|
+    t.string "description"
+    t.bigint "pokemon_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["pokemon_id"], name: "index_species_on_pokemon_id"
   end
 
   create_table "types", force: :cascade do |t|
