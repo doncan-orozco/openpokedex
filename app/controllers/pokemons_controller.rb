@@ -2,6 +2,6 @@
 
 class PokemonsController < ApplicationController
   def index
-    @pokemons = Pokemon.all.eager_load(:types)
+    @pokemons = Pokemon.all.eager_load(:types, :abilities)
   end
 end

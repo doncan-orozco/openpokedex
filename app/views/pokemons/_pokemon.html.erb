@@ -20,4 +20,11 @@
       <%= type.name %>
     <% end %>
   </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Abilities:</strong>
+    <% pokemon.abilities.each do |ability| %>
+      <%= ability.name %>
+    <% end %>
+  </p>
 </div>
