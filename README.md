@@ -1,24 +1,55 @@
-# README
+# OpenPokeDex Rails App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Welcome to the **OpenPokeDex Rails App**! This web application allows users to explore information about their favorite Pokémon using data from the [PokeAPI](https://pokeapi.co/).
 
-Things you may want to cover:
+## Features
 
-* Ruby version
+- **Pokédex Search**: Users can search for Pokémon by name or Pokédex number.
+- **Detailed Pokémon Information**: View comprehensive details about each Pokémon, including their type, abilities, base stats, and evolutions.
+- **Beautiful Pokémon Artwork**: High-quality official artwork of Pokémon is displayed.
+- **User-Friendly Interface**: The app provides an intuitive and responsive user interface.
 
-* System dependencies
+## Getting Started
 
-* Configuration
+1. **Clone the Repository**:
+   ```
+   git clone https://github.com/your-username/pokeapi-rails-app.git
+   ```
 
-* Database creation
+2. **Install Dependencies**:
+   ```
+   bundle install
+   ```
 
-* Database initialization
+3. **Configure API Credentials**:
+   - Create an account on [PokeAPI](https://pokeapi.co/).
+   - Obtain your API key.
+   - Add your API key to the `config/application.yml` file (create this file if it doesn't exist).
 
-* How to run the test suite
+4. **Database Setup**:
+   ```
+   rails db:migrate
+   ```
 
-* Services (job queues, cache servers, search engines, etc.)
+5. **Start the Server**:
+   ```
+   rails server
+   ```
 
-* Deployment instructions
+6. **Access the App**:
+   Open your web browser and navigate to `http://localhost:3000`.
 
-* ...
+## Contributing
+
+Contributions are welcome! If you find any issues or have ideas for improvements, feel free to submit a pull request.
+
+## Credits
+
+- [PokeAPI](https://pokeapi.co/) - The amazing Pokémon data source.
+- Pokémon images provided by [PokeAPI Sprites](https://github.com/PokeAPI/sprites).
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+---
