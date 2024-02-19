@@ -13,4 +13,11 @@
     <strong class="block font-medium mb-1">Weight:</strong>
     <%= pokemon.weight %>
   </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Types:</strong>
+    <% pokemon.types.each do |type| %>
+      <%= type.name %>
+    <% end %>
+  </p>
 </div>
