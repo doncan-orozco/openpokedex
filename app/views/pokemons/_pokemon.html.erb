@@ -1,7 +1,8 @@
 <div id="<%= dom_id pokemon %>">
   <p class="my-5">
     <strong class="block font-medium mb-1">Name:</strong>
-    <%= pokemon.name %>
+    <%= link_to pokemon.name, pokemon_path(pokemon) if action_name == "index" %>
+    <%= pokemon.name if action_name == "show" %>
   </p>
 
   <p class="my-5">
