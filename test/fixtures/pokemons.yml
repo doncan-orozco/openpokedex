@@ -1,11 +1,11 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
+bulbasaur:
   name: bulbasaur
   pokedex_id: 1
   weight: 69
 
-two:
+ivysaur:
   name: ivysaur
   pokedex_id: 2
   weight: 130
