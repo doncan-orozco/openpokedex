@@ -4,8 +4,13 @@ bulbasaur:
   name: bulbasaur
   pokedex_id: 1
   weight: 69
+  types: grass
+  abilities: overgrow
 
 ivysaur:
   name: ivysaur
   pokedex_id: 2
   weight: 130
+  types: grass
+  abilities: overgrow
+
