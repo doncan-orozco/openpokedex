@@ -6,6 +6,6 @@ class PokemonsController < ApplicationController
   end
 
   def show
-    @pokemon = Pokemon.eager_load(:types, :abilities).find(params[:id])
+    @pokemon = Pokemon.eager_load(:types, :abilities, :species).find(params[:id])
   end
 end

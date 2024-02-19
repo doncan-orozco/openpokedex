@@ -7,7 +7,7 @@ class PokemonsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should get show" do
-    get pokemon_url(pokemons(:one))
+    get pokemon_url(pokemons(:bulbasaur))
     assert_response :success
   end
 end
