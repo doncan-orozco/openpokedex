@@ -1,40 +1,24 @@
 <div id="<%= dom_id pokemon %>">
+  <%= link_to pokemon_path(pokemon, page: params[:page]) do %>
+    <div class="max-w-52 m-auto overflow-hidden bg-white shadow-lg sm:rounded-lg p-4 min-h-72 min-w-52">
+      <div class="flex justify-between space-x-2 items-center">
+        <p class="text-base leading-6 font-semibold text-gray-900"><%= pokemon.name.capitalize %></p>
+        <p class="text-xs"><%= pokemon.pokedex_id %></p>
+      </div>
+      <img src="<%= pokemon.front_default_url %>" alt="Pokemon Image" class="m-auto">
+      <div class="flex justify-between space-x-2">
+        <div>
+          <% pokemon.types.each do |type| %>
+            <p class="text-sm"><%= type.name.capitalize %></p>
+          <% end %>
+        </div>
+        <p class="text-xs"><%= pokemon.weight %> lb</p>
+      </div>
 
-  <img src="<%= pokemon.front_default_url %>" alt="Pokemon Image">
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Name:</strong>
-    <%= link_to pokemon.name, pokemon_path(pokemon) if action_name == "index" %>
-    <%= pokemon.name if action_name == "show" %>
-  </p>
-
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Pokedex:</strong>
-    <%= pokemon.pokedex_id %>
-  </p>
-
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Weight:</strong>
-    <%= pokemon.weight %>
-  </p>
-
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Types:</strong>
-    <% pokemon.types.each do |type| %>
-      <%= type.name %>
-    <% end %>
-  </p>
-
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Abilities:</strong>
-    <% pokemon.abilities.each do |ability| %>
-      <%= ability.name %>
-    <% end %>
-  </p>
-
-  <% if action_name == "show" %>
-    <p class="my-5">
-      <strong class="block font-medium mb-1">Description:</strong>
-      <%= pokemon.species.description %>
-    </p>
+      <p class="text-sm leading-6 font-semibold text-gray-900 mt-2">Abilities:</p>
+      <% pokemon.abilities.each do |ability| %>
+        <p class="text-sm"><%= ability.name.capitalize %></p>
+      <% end %>
+    </div>
   <% end %>
 </div>
