@@ -1,4 +1,6 @@
 <div id="<%= dom_id pokemon %>">
+
+  <img src="<%= pokemon.front_default_url %>" alt="Pokemon Image">
   <p class="my-5">
     <strong class="block font-medium mb-1">Name:</strong>
     <%= link_to pokemon.name, pokemon_path(pokemon) if action_name == "index" %>
@@ -34,5 +36,5 @@
       <strong class="block font-medium mb-1">Description:</strong>
       <%= pokemon.species.description %>
     </p>
-<% end %>
+  <% end %>
 </div>

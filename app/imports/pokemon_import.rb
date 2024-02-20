@@ -13,7 +13,9 @@ class PokemonImport < ApplicationImport
   def attributes
     {name: response["name"],
      pokedex_id: response["id"],
-     weight: response["weight"]}
+     weight: response["weight"],
+     front_default_url: response["sprites"]["front_default"],
+     pokemon_response: response}
   end
 
   def types

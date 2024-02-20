@@ -9,9 +9,14 @@ class SpeciesImport < ApplicationImport
   private
 
   def attributes
-    {description: response["flavor_text_entries"].find { |entrie|
-                    entrie.dig("language",
-                      "name") == "en"
-                  }["flavor_text"]}
+    {description: description,
+     species_response: response}
+  end
+
+  def description
+    response["flavor_text_entries"].find { |entry|
+      entry.dig("language",
+        "name") == "en"
+    }["flavor_text"]
   end
 end
