@@ -14,7 +14,7 @@ class PokemonImport < ApplicationImport
     {name: response["name"],
      pokedex_id: response["id"],
      weight: response["weight"],
-     front_default_url: response["sprites"]["front_default"],
+     front_default_url: response.dig("sprites", "front_default"),
      pokemon_response: response}
   end
 
