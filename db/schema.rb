@@ -37,7 +37,6 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_20_043920) do
     t.datetime "updated_at", null: false
     t.integer "parent_id"
     t.string "front_default_url"
-    t.jsonb "pokemon_response"
     t.index ["pokedex_id"], name: "index_pokemons_on_pokedex_id", unique: true
   end
 
@@ -64,7 +63,6 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_20_043920) do
     t.bigint "pokemon_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.jsonb "species_response"
     t.index ["pokemon_id"], name: "index_species_on_pokemon_id"
   end
 
