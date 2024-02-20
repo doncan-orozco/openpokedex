@@ -18,12 +18,14 @@ class CreateEvolutionsService < ApplicationService
 
   def create_pokemon_evolution_chain
     chain = evolution_chain_response["chain"]
+    id = chain["species"]["url"].split("/").last
 
-    pokemon_chain << CreateOrUpdatePokemonWithAssociationsService.for(chain["species"]["name"])
+    pokemon_chain << CreateOrUpdatePokemonWithAssociationsService.for(chain["species"]["name"], id)
 
     while chain["evolves_to"].present?
       chain = chain["evolves_to"].first
-      pokemon_chain << CreateOrUpdatePokemonWithAssociationsService.for(chain["species"]["name"])
+      id = chain["species"]["url"].split("/").last
+      pokemon_chain << CreateOrUpdatePokemonWithAssociationsService.for(chain["species"]["name"], id)
     end
 
     pokemon_chain
