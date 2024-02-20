@@ -2,7 +2,7 @@
 
 class PokemonsController < ApplicationController
   def index
-    @pokemons = Pokemon.all.eager_load(:types, :abilities)
+    @pagy, @pokemons = pagy(Pokemon.all.eager_load(:types, :abilities))
   end
 
   def show
