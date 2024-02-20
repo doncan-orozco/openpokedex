@@ -6,6 +6,9 @@ class PokemonImport < ApplicationImport
     record.types << types
     record.abilities << abilities
     record
+  rescue ActiveRecord::RecordInvalid => exception
+    Rails.logger.error "[#{self.class}] #{exception.message}"
+    record
   end
 
   private
