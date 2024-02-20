@@ -1,7 +1,9 @@
 class AddFrontDefaultUrlToPokemon < ActiveRecord::Migration[7.1]
   def change
-    add_column :pokemons, :front_default_url, :string
-    add_column :pokemons, :pokemon_response, :jsonb
+    change_table :pokemons, bulk: true do |t|
+      t.string :front_default_url
+      t.jsonb :pokemon_response
+    end
 
     add_column :species, :species_response, :jsonb
   end
