@@ -8,7 +8,6 @@ bulbasaur:
   abilities: overgrow
   parent_id: <%= ActiveRecord::FixtureSet.identify(:ivysaur) %>
   front_default_url: https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png
-  pokemon_response: {}
 
 ivysaur:
   name: ivysaur
@@ -18,4 +17,3 @@ ivysaur:
   abilities: overgrow
   parent_id: nil
   front_default_url: https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png
-  pokemon_response: {}

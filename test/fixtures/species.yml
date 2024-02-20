@@ -1,9 +1,7 @@
 bulbasaur_species:
   description: A strange seed was planted on its back at birth. The plant sprouts and grows with this Pokémon.
   pokemon: bulbasaur
-  species_response: {}
 
 ivysaur_species:
   description: When the bulb on its back grows large, it appears to lose the ability to stand on its hind legs.
   pokemon: ivysaur
-  species_response: {}

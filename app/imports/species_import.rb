@@ -12,8 +12,7 @@ class SpeciesImport < ApplicationImport
   private
 
   def attributes
-    {description: description,
-     species_response: response}
+    {description: description}
   end
 
   def description
