@@ -38,7 +38,6 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_20_043920) do
     t.integer "parent_id"
     t.string "front_default_url"
     t.jsonb "pokemon_response"
-    t.index ["name"], name: "index_pokemons_on_name", unique: true
     t.index ["pokedex_id"], name: "index_pokemons_on_pokedex_id", unique: true
   end
 
