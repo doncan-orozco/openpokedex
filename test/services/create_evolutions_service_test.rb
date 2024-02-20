@@ -4,7 +4,7 @@ require "test_helper"
 
 class CreateEvolutionsServiceTest < ActiveSupport::TestCase
   setup do
-    @chain_response = {chain: {species: {name: "squirtle"}, evolves_to: [species: {name: "wartortle"}, evolves_to: [species: {name: "blastoise"}]]}}.with_indifferent_access
+    @chain_response = {chain: {species: {name: "squirtle", url: "/1"}, evolves_to: [species: {name: "wartortle", url: "/2"}, evolves_to: [species: {name: "blastoise", url: "/3"}]]}}.with_indifferent_access
     @mock = Minitest::Mock.new
     @mock.expect :process, Pokemon.create(name: "squirtle", pokedex_id: 7, weight: 90)
     @mock.expect :process, Pokemon.create(name: "wartortle", pokedex_id: 8, weight: 22)
