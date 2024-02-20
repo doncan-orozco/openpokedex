@@ -50,6 +50,8 @@ gem "bootsnap", require: false
 gem "closure_tree"
 
 gem "httparty"
+
+gem "pagy", "~> 7.0" # omit patch digit
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[mri windows]
