@@ -1,0 +1,14 @@
+<% content_for :header do %>
+  <h1 class="text-3xl font-bold tracking-tight text-gray-900">Pokédex</h1>
+<% end %>
+
+<div class="w-full">
+  <div class="my-8">
+    <div id="pokemons" class="min-w-full grid gap-x-2 gap-y-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+      <%= render @pokemons %>
+    </div>
+  </div>
+  <div class="flex justify-center mb-4">
+    <%== pagy_nav(@pagy) %>
+  </div>
+</div>
