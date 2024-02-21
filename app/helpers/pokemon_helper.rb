@@ -1,5 +1,11 @@
 module PokemonHelper
-  def card_color(type)
+  def pokemon_types(pokemon)
+    pokemon.types.map { |type| type.name.capitalize }.sort.join(", ")
+  end
+
+  def card_color(types)
+    type = types.map(&:name).min
+
     case type
     when "grass"
       "bg-green-600/60"
