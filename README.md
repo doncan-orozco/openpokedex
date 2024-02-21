@@ -1,10 +1,10 @@
-# OpenPokeDex Rails App
+# OpenPokedex Rails App
 
-Welcome to the **OpenPokeDex Rails App**! This web application allows users to explore information about their favorite Pokémon using data from the [PokeAPI](https://pokeapi.co/).
+Welcome to the **OpenPokedex Rails App**! This web application allows users to explore information about their favorite Pokémon using data from the [PokeAPI](https://pokeapi.co/).
 
 ## Features
 
-- **Pokédex Search**: Users can search for Pokémon by name or Pokédex number.
+- **Pokédex Search**: Users can search for Pokémon by name or Pokédex number. (Coming soon!)
 - **Detailed Pokémon Information**: View comprehensive details about each Pokémon, including their type, abilities, base stats, and evolutions.
 - **Beautiful Pokémon Artwork**: High-quality official artwork of Pokémon is displayed.
 - **User-Friendly Interface**: The app provides an intuitive and responsive user interface.
@@ -21,23 +21,32 @@ Welcome to the **OpenPokeDex Rails App**! This web application allows users to e
    bundle install
    ```
 
-3. **Configure API Credentials**:
-   - Create an account on [PokeAPI](https://pokeapi.co/).
-   - Obtain your API key.
-   - Add your API key to the `config/application.yml` file (create this file if it doesn't exist).
-
-4. **Database Setup**:
+5. **Database Setup**:
    ```
-   rails db:migrate
+   rails db:setup
    ```
 
 5. **Start the Server**:
    ```
-   rails server
+   bin/dev
    ```
 
 6. **Access the App**:
    Open your web browser and navigate to `http://localhost:3000`.
+
+
+## Fetch data
+You can fetch all pokemon data easly
+
+   ```
+   rake pokemon_migration:fetch_all_pokemons
+   ```
+
+Or just seed the DB with a few examples
+
+   ```
+   rails db:seed
+   ```
 
 ## Contributing
 
