@@ -2,6 +2,18 @@
   <h1 class="text-3xl font-bold tracking-tight text-gray-900">Pokédex</h1>
 <% end %>
 
+<div class= "flex space-x-8 items-center mb-4">
+  <%= form_with url: pokemons_path, method: :get, scope: :q, class: "flex space-x-4" do |form| %>
+    <div class="flex items-center">
+      <%= form.label :search, "Name:", class: "mr-2" %>
+      <%= form.text_field :search, value: params.dig(:q, :search), class: "border border-gray-300 rounded-md p-2" %>
+    </div>
+    <%= form.submit "Search", name: nil, class: "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" %>
+  <% end %>
+
+  <%= link_to "Clean search", pokemons_path, class: "bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded" %>
+</div>
+
 <div class="w-full">
   <div class="my-8">
     <div id="pokemons" class="min-w-full grid gap-x-2 gap-y-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
