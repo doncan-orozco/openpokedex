@@ -43,10 +43,27 @@
     </div>
   </div>
 
+  <div class="flex justify-between">
+    <div>
+      <% if @prev_pokemon %>
+        <%= link_to pokemon_path(@prev_pokemon, page: params[:page]), class: "font-semibold text-indigo-600 hover:text-indigo-500" do %>
+          <span> &#8592; Previous Pokémon</span>
+        <% end %>
+      <% end %>
+    </div>
+
+    <div>
+      <% if @next_pokemon %>
+        <%= link_to pokemon_path(@next_pokemon, page: params[:page]), class: "font-semibold text-indigo-600 hover:text-indigo-500" do %>
+          <span> Next Pokémon &#8594;</span>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
   <div class="w-full mb-12">
     <p class="text-xl leading-6 font-semibold text-gray-900 my-8"> Evolutive Tree </p>
     <div class="flex flex-col space-y-4 md:flex-row md:space-y-0 md:space-x-4 md:justify-center">
-      <%= render @pokemons %>
+      <%= render @pokemon_family, partial: "pokemon" %>
     </div>
   </div>
 </div>
