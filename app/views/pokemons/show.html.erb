@@ -9,7 +9,7 @@
 </div>
 
 <div>
-  <div class="max-w-sm m-auto overflow-hidden shadow-lg sm:rounded-lg px-8 py-2 border-[12px] border-amber-300  <%= card_color(@pokemon.types.first.name) %>">
+  <div class="max-w-sm m-auto overflow-hidden shadow-lg sm:rounded-lg px-8 py-2 border-[12px] border-amber-300  <%= card_color(@pokemon.types) %>">
     <div class="m-auto max-w-sm">
       <p class="text-xl leading-6 font-semibold text-gray-900"><%= @pokemon.name.capitalize %></p>
       <p class="text-base"><%= @pokemon.pokedex_id %></p>
