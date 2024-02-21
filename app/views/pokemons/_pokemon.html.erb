@@ -1,5 +1,5 @@
 <div id="<%= dom_id pokemon %>">
-  <%= link_to pokemon_path(pokemon, page: params[:page]), class: "contents" do %>
+  <%= link_to pokemon_path(pokemon, {page: params[:page], q: params[:q]&.permit! }), class: "contents" do %>
     <div class="max-w-56 m-auto overflow-hidden shadow-lg sm:rounded-lg px-4 py-1 min-h-72 min-w-52 border-[12px] border-amber-300 <%= card_color(pokemon.types) %>">
       <div class="flex justify-between space-x-2 items-center">
         <p class="text-base leading-6 font-semibold text-gray-900"><%= pokemon.name.capitalize %></p>
